@@ -1,12 +1,12 @@
 * {
-    // To reset
+    /* To reset */
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
 body {
-    font-family: "Open Sans", sans-serif; // Open Sans is a Google font
+    font-family: "Open Sans", sans-serif; /* Open Sans is a Google font */
     background: black;
     color: white;
     line-height: 1.6;
@@ -54,22 +54,22 @@ body {
 
 /* Main Content */
 .main-content {
-    display: flex; // To have the form (left half) and the text container (right half) next to each other
+    display: flex; /* To have the form (left half) and the text container (right half) next to each other */
     gap: 50px;
-    max-width: 1100px; // To limit the width
-    margin: 200px auto; // top-bottom / left-right (auto -> center) // 200px to push down the content a little bit
+    max-width: 1100px; /* To limit the width */
+    margin: 200px auto; /* top-bottom / left-right (auto -> center) // 200px to push down the content a little bit */
     justify-content: center;
-    align-items: start; // To align the items to the top
-    height: 100%; // 100 % of the container which is the wrapper
-    padding: 0 40px; // top-bottom / left-right
+    align-items: start; /* To align the items to the top */
+    height: 100%; /* 100 % of the container which is the wrapper */
+    padding: 0 40px; /* top-bottom / left-right */
 }
 
 .main-content form {
-    flex: 1; // To have the form (left half) and the text container (right half) 50 / 50
+    flex: 1; /* To have the form (left half) and the text container (right half) 50 / 50 */
 }
 
 .main-content .text-container {
-    flex: 1; // To have the form (left half) and the text container (right half) 50 / 50
+    flex: 1; /* To have the form (left half) and the text container (right half) 50 / 50 */
 }
 
 /* Form */
@@ -90,14 +90,14 @@ body {
     padding: 15px;
     border: 0;
     border-radius: 5px;
-    background: rgba(255, 255, 255, 0.2); // To have a translucent background
+    background: rgba(255, 255, 255, 0.2); /* To have a translucent background */
     color: white;
     outline: 0;
 }
 
 .form-group textarea {
     height: 100px;
-    resize: none; // To disable resizing
+    resize: none; /* To disable resizing */
     margin-bottom: 10px;
 }
 
@@ -127,4 +127,51 @@ body {
 
 .text-container {
     font-size: 18px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .header {
+        padding: 30px 10px 10px;
+    }
+
+    .header,
+    .header .header-right {
+        /* .header .header-right coz just .header-right wouldn't have enough specificity (in media query) to overwrite .header .header-right */
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .main-content {
+        flex-direction: column-reverse;
+        justify-content: start; /* To have it on the top */
+        margin: auto; /* To center it horizontally */
+        padding: 50px;
+    }
+
+    .main-content form,
+    .main-content .text-container {
+        width: 100%;
+    }
+
+    .main-content h1 {
+        font-size: 40px;
+        text-align: center;
+        line-height: 1.4;
+    }
+
+    .main-content p {
+        display: none;
+    }
+}
+
+@media (max-height: 500px) {
+    /* For landscape mode */
+    .main-content {
+        margin: 0 auto;
+    }
+
+    .main-content h1 {
+        font-size: 40px;
+    }
 }
