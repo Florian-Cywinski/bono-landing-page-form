@@ -51,3 +51,23 @@ body {
 .header .header-right a:hover {
     color: purple;
 }
+
+/* Main Content */
+.main-content {
+    display: flex; // To have the form (left half) and the text container (right half) next to each other
+    gap: 50px;
+    max-width: 1100px; // To limit the width
+    margin: 200px auto; // top-bottom / left-right (auto -> center) // 200px to push down the content a little bit
+    justify-content: center;
+    align-items: start; // To align the items to the top
+    height: 100%; // 100 % of the container which is the wrapper
+    padding: 0 40px;
+}
+
+.main-content form {
+    flex: 1; // To have the form (left half) and the text container (right half) 50 / 50
+}
+
+.main-content .text-container {
+    flex: 1; // To have the form (left half) and the text container (right half) 50 / 50
+}
