@@ -2,9 +2,6 @@
 
 A landing page form - from Brad Traversy's 'Modern HTML & CSS From The Beginning 2.0' course.
 
-Try out the app :) - https://newsgrid-website-fc.netlify.app/
-
-
 ## Development steps:
 
 1. Setup & HTML
